@@ -57,5 +57,5 @@ matplotlib
 ## Our network
 
 <p align="center">
-<img src="figures/overview.png">
+<img src="overview.png">
 </p>
