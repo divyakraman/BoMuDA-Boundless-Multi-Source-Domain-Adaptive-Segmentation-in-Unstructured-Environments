@@ -32,15 +32,15 @@ Table of Contents
 Python version: 3.7
 
 ### Code structure
-'dataset' folder - contains dataloaders, list of train and validation images <br>
-'model' folder - contains code for the network architectures <br>
-'utils' folder - additional functions <br>
-eval_idd_openset.py - evaluation script for IDD, for the overall algorithm <br>
-eval_idd_ensemble.py - evaluation script for model outputs ensembled from step 1 and step 2 <br>
-train_singlesourceDA.py - training script for single source DA <br>
-train_bddbase_multi3source_furtheriterations.py - training script for step 1 <br>
-train_multi3source_combinedbddbase.py - training script for step 2 <br>
-train_openset.py - training script for boundless DA module <br>
+'dataset' folder - Contains dataloaders, list of train and validation images <br>
+'model' folder - Contains code for the network architectures <br>
+'utils' folder - Additional functions <br>
+eval_idd_openset.py - Evaluation script for IDD, for the overall algorithm <br>
+eval_idd_ensemble.py - Evaluation script for model outputs ensembled from step 1 and step 2 <br>
+train_singlesourceDA.py - Training script for single source DA <br>
+train_bddbase_multi3source_furtheriterations.py - Training script for step 1 <br>
+train_multi3source_combinedbddbase.py - Training script for step 2 <br>
+train_openset.py - Training script for boundless DA module <br>
 
 ### Datasets
 * [**India Driving Dataset**](https://idd.insaan.iiit.ac.in/) 
