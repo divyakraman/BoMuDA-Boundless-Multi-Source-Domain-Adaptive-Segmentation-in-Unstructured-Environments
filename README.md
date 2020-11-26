@@ -2,7 +2,7 @@
 
 Project Page - https://gamma.umd.edu/bomuda
 
-Please cite our work if you found it useful.
+Please cite our paper if you find it useful.
 
 ```
 @article{kothandaraman2020bomuda,
@@ -26,6 +26,7 @@ Table of Contents
      * [Datasets](#datasets)
      * [Dependencies](#dependencies)
   * [**Our network**](#our-network)
+  * [**Acknowledgements**](#acknowledgements)
 
 ## Repo Details and Contents
 Python version: 3.7
@@ -59,3 +60,7 @@ matplotlib
 <p align="center">
 <img src="overview.png">
 </p>
+
+## Acknowledgements
+
+This code is heavily borrowed from [**AdaptSegNet**](https://github.com/wasidennis/AdaptSegNet)
