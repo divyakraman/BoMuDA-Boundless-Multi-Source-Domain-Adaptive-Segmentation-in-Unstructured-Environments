@@ -14,7 +14,7 @@ Please cite our work if you found it useful.
 ```
 
 <p align="center">
-<img src="figures/cover.png" width="260">
+<img src="figures/cover.png" width="360">
 </p>
 
 Table of Contents
@@ -24,7 +24,38 @@ Table of Contents
   * [**Repo Details and Contents**](#repo-details-and-contents)
      * [Code structure](#code-structure)
      * [Datasets](#datasets)
-  * [**How to Run**](#how-to-run)
      * [Dependencies](#dependencies)
-     * [Usage](#usage)    
   * [**Our network**](#our-network)
+
+## Repo Details and Contents
+Python version: 3.7
+
+### Code structure
+'dataset' folder - contains dataloaders, list of train and validation images
+'model' folder - contains code for the network architectures
+'utils' folder - additional functions
+eval_idd_openset.py - evaluation script for IDD, for the overall algorithm
+eval_idd_ensemble.py - evaluation script for model outputs ensembled from step 1 and step 2
+train_singlesourceDA.py - training script for single source DA
+train_bddbase_multi3source_furtheriterations.py - training script for step 1 
+train_multi3source_combinedbddbase.py - training script for step 2
+train_openset.py - training script for boundless DA module
+
+### Datasets
+* [**India Driving Dataset**](https://idd.insaan.iiit.ac.in/) 
+* [**CityScapes**](https://www.cityscapes-dataset.com/) 
+* [**Berkeley Deep Drive**](https://bdd-data.berkeley.edu/) 
+* [**GTA5**](https://download.visinf.tu-darmstadt.de/data/from_games/) 
+* [**SynScapes**](https://7dlabs.com/synscapes-overview) 
+
+### Dependencies
+pytorch
+numpy
+scipy
+matplotlib
+
+## Our network
+
+<p align="center">
+<img src="figures/overview.png">
+</p>
