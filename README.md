@@ -41,14 +41,14 @@ Contains the cross entropy loss function
 #### Training
 Single-source domain adaptation models need to trained for initialization. This is done by the script 'train_singlesourceDA.py'. The paths to the source, and target domain datasets, along with the other paths can be set in lines 29-51 (Command line argument parsing can also be done). <br>
 
-Step 1 (Alt-Inc) training - train_bddbase_multi3source_furtheriterations.py. The paths to the single-source models can be set in lines 242-251. The paths to the best source dataset, and target dataset, along with the other hyperparameters can be set in lines 29-51.
+Step 1 (Alt-Inc) Training - train_bddbase_multi3source_furtheriterations.py. The paths to the single-source models can be set in lines 242-251. The paths to the best source dataset, and target dataset, along with the other hyperparameters can be set in lines 29-51.
 
-Step 2 (Alt-Inc) training - train_multi3source_combinedbddbase.py. The paths to the single-source models can be set in lines 159-161. The paths to the target dataset, along with the other hyperparameters can be set in lines 27-49.
+Step 2 (Alt-Inc) Training - train_multi3source_combinedbddbase.py. The paths to the single-source models can be set in lines 159-161. The paths to the target dataset, along with the other hyperparameters can be set in lines 27-49.
 
 Boundless Domain Adaptation Module - train_openset.py. The paths to the single-source models, and the closed-set multi-source model can be set in lines 172-176. The paths to the target dataset, along with the other hyperparameters can be set in lines 27-57.
 
 #### Evaluation
-eval_idd_BoMuDA.py - Evaluation script for India Driving Dataset, for the overall algorithm (Multi-source + Boundless)<br>
+eval_idd_BoMuDA.py - Evaluation script for India Driving Dataset, for the overall algorithm (Multi-source + Boundless)<br>. The scripts computes the IoU, and Accuracy for individual classes along with the mean IoU (mIoU), and mean Accuracy (mAcc). 
 
 ### Datasets
 * [**India Driving Dataset**](https://idd.insaan.iiit.ac.in/) 
@@ -58,10 +58,10 @@ eval_idd_BoMuDA.py - Evaluation script for India Driving Dataset, for the overal
 * [**SynScapes**](https://7dlabs.com/synscapes-overview) 
 
 ### Dependencies
-pytorch <br>
-numpy <br>
-scipy <br>
-matplotlib <br>
+PyTorch <br>
+NumPy <br>
+SciPy <br>
+Matplotlib <br>
 
 ## Our network
 
