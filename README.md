@@ -32,12 +32,23 @@ Table of Contents
 Python version: 3.7
 
 ### Code structure
-'dataset' folder - Contains dataloaders, list of train and validation images <br>
-'model' folder - Contains code for the network architectures <br>
-'utils' folder - Additional functions <br>
-eval_idd_openset.py - Evaluation script for IDD, for the overall algorithm <br>
-eval_idd_ensemble.py - Evaluation script for model outputs ensembled from step 1 and step 2 <br>
-train_singlesourceDA.py - Training script for single source DA <br>
+#### Dataloaders <br>
+The 'dataset' folder contains dataloaders for GTA5, BDD, CityScapes, Synscapes, and India Driving Dataset, and the corresponding train-test image splits. The dataloaders can be replicated for other datasets that the user may want to train on.
+#### Models
+The 'model' folder contains network architectures for DeepLab, Dilated Residual Networks, network used in step 2 of Alt-Inc algorithm (source3_concat.py), and the network used for the boundless module (openset_model.py)
+#### Utils
+Contains the cross entropy loss function
+#### Training
+Single-source domain adaptation models need to trained for initialization. This is done by the script 'train_singlesourceDA.py'. The paths to the source, and target domain datasets, along with the other paths can be set in lines 29-51 (Command line argument parsing can also be done). <br>
+
+Step 1 (Alt-Inc) training - train_bddbase_multi3source_furtheriterations.py. The paths to the single-source models can be set in lines 242-251. The paths to the best source dataset, and target dataset, along with the other hyperparameters can be set in lines 29-51.
+
+Step 2 (Alt-Inc) training - train_multi3source_combinedbddbase.py. The paths to the single-source models can be set in lines 159-161. The paths to the target dataset, along with the other hyperparameters can be set in lines 27-49.
+
+Boundless Domain Adaptation Module - train_openset.py. The paths to the single-source models, and the closed-set multi-source model can be set in lines 172-176. The paths to the target dataset, along with the other hyperparameters can be set in lines 27-57.
+
+#### Evaluation
+eval_idd_BoMuDA.py - Evaluation script for India Driving Dataset, for the overall algorithm (Multi-source + Boundless)<br>
 train_bddbase_multi3source_furtheriterations.py - Training script for step 1 <br>
 train_multi3source_combinedbddbase.py - Training script for step 2 <br>
 train_openset.py - Training script for boundless DA module <br>
