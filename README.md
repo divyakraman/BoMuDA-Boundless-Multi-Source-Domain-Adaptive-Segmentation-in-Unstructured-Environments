@@ -48,7 +48,7 @@ Step 2 (Alt-Inc) Training - train_multi3source_combinedbddbase.py. The paths to 
 Boundless Domain Adaptation Module - train_openset.py. The paths to the single-source models, and the closed-set multi-source model can be set in lines 172-176. The paths to the target dataset, along with the other hyperparameters can be set in lines 27-57.
 
 #### Evaluation
-eval_idd_BoMuDA.py - Evaluation script for India Driving Dataset, for the overall algorithm (Multi-source + Boundless)<br>. The scripts computes the IoU, and Accuracy for individual classes along with the mean IoU (mIoU), and mean Accuracy (mAcc). 
+eval_idd_BoMuDA.py - Evaluation script for India Driving Dataset, for the overall algorithm (Multi-source + Boundless). The script computes the IoU, and Accuracy for individual classes along with the mean IoU (mIoU), and mean Accuracy (mAcc). 
 
 ### Datasets
 * [**India Driving Dataset**](https://idd.insaan.iiit.ac.in/) 
