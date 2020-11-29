@@ -49,9 +49,6 @@ Boundless Domain Adaptation Module - train_openset.py. The paths to the single-s
 
 #### Evaluation
 eval_idd_BoMuDA.py - Evaluation script for India Driving Dataset, for the overall algorithm (Multi-source + Boundless)<br>
-train_bddbase_multi3source_furtheriterations.py - Training script for step 1 <br>
-train_multi3source_combinedbddbase.py - Training script for step 2 <br>
-train_openset.py - Training script for boundless DA module <br>
 
 ### Datasets
 * [**India Driving Dataset**](https://idd.insaan.iiit.ac.in/) 
