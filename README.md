@@ -53,13 +53,19 @@ Boundless Domain Adaptation Module - train_openset.py. The paths to the single-s
 eval_idd_BoMuDA.py - Evaluation script for India Driving Dataset, for the overall algorithm (Multi-source + Boundless). The script computes the IoU, and Accuracy for individual classes along with the mean IoU (mIoU), and mean Accuracy (mAcc). 
 
 ### Testing a pretrained model
-You will need pe-trained models for each single source-target domain adaptation networks, the closed-set multi-source model obtained at the final iteration of the Alt-Inc algorithm, and the boundless DA network. The code for evaluation (eval_idd_BoMuDA.py) can be used to test the model on a specified dataset.
+
+You will need pe-trained models for each single source-target domain adaptation networks, the closed-set multi-source model obtained at the final iteration of the Alt-Inc algorithm, and the boundless DA network. The code for evaluation (eval_idd_BoMuDA.py) can be used to test the model on a specified dataset. <br>
 
 ### Training your own model
+
 Step 0: Initialization of single source DA models (Use train_singlesourceDA.py) <br>
+
 Step 1: Step 1 of Alt-Inc algorithm, use train_bddbase_multi3source_furtheriterations.py <br>
+
 Step 2: Step 2 of Alt-Inc algorithm, use train_multi3source_combinedbddbase.py <br>
+
 Repeat Step 1 and step 2 until convergence <br>
+
 Step 3: Use the closed set multi-source model obtained from Alt-Inc, and the target dataset for boundless DA (train_openset.py)
 
 ### Datasets
