@@ -35,13 +35,10 @@ Python version: 3.7
 |Dataset|Dataloader|List of images|
 |-----|-----|-----|
 |CityScapes|dataset/cityscapes.py|dataset/cityscapes_list|
-|India Driving Dataset| dataset/cityscapes_fog.py | dataset/cityscapes_list (train_rain_fog, val_rain_fog) |
-|Synthetic Rain | dataset/cityscapes_rain.py | dataset/cityscapes_list (train_rain_fog, val_rain_fog) |
-|Synthetic Rain | dataset/cityscapes_rain.py | dataset/cityscapes_list (train_rain_fog, val_rain_fog) |
-|Real Fog - Foggy Zurich| dataset/foggy_zurich/train(test).py | dataset/foggy_zurich/lists_file_names  |
-|Real, Night Driving - Dark Zurich | dataset/dark_zurich/train(test).py | dataset/dark_zurich/lists_file_names  |
-|Heterogeneous Real, Rain + Night - Raincouver | dataset/raincouver/raincouver.py | dataset/raincouver (train_rain_fog, val_rain_fog) |
-|Heterogeneous Real, Berkeley Deep Drive | dataset/bdd/bdd_{train,val}.py | dataset/bdd/bdd_list |
+|India Driving Dataset| dataset/idd_dataset.py,idd_openset.py | dataset/idd_list|
+|GTA | dataset/gta_dataset.py | dataset/gta_list |
+|SynScapes | dataset/synscapes.py | dataset/synscapes_list |
+|Berkeley Deep Drive | dataset/bdd/bdd_source.py | dataset/bdd_list |
 
 ### Our network
 <p align="center">
@@ -66,6 +63,8 @@ python eval_idd_BoMuDA.py
 ```
 python eval_idd_openset.py
 ```
+ 
+Make sure to set appropriate paths to the folders containing the datasets, and the models in the training and evaluation files. <br>
 
 ### Datasets
 * [**Clear weather: CityScapes**](https://www.cityscapes-dataset.com/) 
