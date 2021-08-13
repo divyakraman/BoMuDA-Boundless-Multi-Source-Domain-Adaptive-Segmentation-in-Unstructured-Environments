@@ -29,6 +29,7 @@ IMG_MEAN = np.array((104.00698793, 116.66876762, 122.67891434), dtype=np.float32
 
 w, h = map(int, input_size_target.split(','))
 input_size_target = (w, h)
+interp_target = nn.Upsample(size=(input_size_target[1], input_size_target[0]), mode='bilinear')
 
 targetloader = data.DataLoader(iddDataSet(data_dir, data_list, max_iters=num_steps * batch_size, crop_size=input_size_target, 
     scale=False, mean=IMG_MEAN), batch_size=batch_size, shuffle=True, num_workers=num_workers, pin_memory=True)
@@ -66,16 +67,8 @@ def fast_hist(a,b,n):
 def per_class_iu(hist):
     return np.diag(hist)/(hist.sum(1)+hist.sum(0)-np.diag(hist))
 
-source1 = torch.load('snapshots/cs2idd_multi_drnd38/CS_50000.pth') 
-source2 = torch.load('snapshots/bestsource_refined/IDD_30000.pth')
-source3 = torch.load('snapshots/gta2idd_multi_drnd38/GTA_50000.pth')
 
 closedset_finalmodel = torch.load('snapshots/idd_multi3source/IDD_30000.pth')
-
-    
-
-net = torch.load('snapshots/idd_openset/IDD_30000.pth')
-
 
 hist = np.zeros((num_classes,num_classes))
 
@@ -85,12 +78,8 @@ for iteration in range(0,num_steps):
     images = Variable(images).cuda()
 
 
-    pred_intermediate1, pred1 = source1(images)
-    pred_intermediate2, pred2 = source2(images)
-    pred_intermediate3, pred3 = source3(images)
-    pred_3source = torch.cat((pred1,pred2,pred3),1)
-    pred = closedset_finalmodel(pred_3source)
-    pred = net(pred)
+    pred_intermediate, pred = closedset_finalmodel(images)
+    pred = interp_target(pred)
             
     pred = pred.detach()
     pred = pred.cpu()
